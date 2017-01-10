@@ -40,7 +40,7 @@ http {
         #access_log  logs/host.access.log  main;
 
         location / {
-            root   /var/www/html/wordpress;
+            root   /var/www/wordpress;
             index  index.php index.html index.htm;
         }
 
@@ -62,7 +62,7 @@ http {
 	# pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
         #
 	location ~ \.php$ {
-            root           /var/www/html/wordpress;
+            root           /var/www/wordpress;
             fastcgi_pass   127.0.0.1:9000;
             fastcgi_index  index.php;
             fastcgi_split_path_info ^(.+\.php)(/.+)$;
